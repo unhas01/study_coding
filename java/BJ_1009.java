@@ -9,7 +9,7 @@ public class BJ_1009 {
 	        b = s.nextInt();
 		c = 0;
 		result = 1;
-	        if (a%10==0||a%10==1||a%10==5||a%10==6) {
+	    if (a%10==0||a%10==1||a%10==5||a%10==6) {
 			result = a%10;
 		}
 	        else if (a%10==4||a%10==9){
@@ -24,5 +24,6 @@ public class BJ_1009 {
 	        if (result==0) result=10;
 	        System.out.println(result);
             }
+		s.close();
     }
 }
