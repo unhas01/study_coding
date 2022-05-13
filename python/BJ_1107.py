@@ -1,18 +1,17 @@
-N = int(input())
+target = int(input())
+ans = abs(100 - target)
 M = int(input())
+if M: 
+    broken = set(input().split())
+else:
+    broken = set()
 
-if M != 0:
-    broken = list(map(int, input().split()))
-
-res = abs(100 - N)
-
-for i in range(1000001):
-    i = str(i)
-    
-    for j in range(len(i)):
-        if int(i[j]) in broken:
+for num in range(1000001): 
+    for N in str(num):
+        if N in broken: 
             break
-        elif j == len(i) - 1:
-            res = min(res, abs(int(i) - N) + len(i))
+    else: 
+    	# min(기존답, 번호를 누른 횟수 + 해당 번호로부터 타겟까지의 차이)
+        ans = min(ans, len(str(num)) + abs(num - target))
 
-print(res)
+print(ans)
