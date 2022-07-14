@@ -1,0 +1,2 @@
+SELECT count(DATETIME) as 동물수
+from ANIMAL_INS
